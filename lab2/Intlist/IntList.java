@@ -80,15 +80,15 @@ public class IntList {
      * *  elements of B.  May modify items of A. Don't use 'new'.
      */
 
-    public static IntList dcatenate(IntList A, IntList B) {
-        if (A == null | B == null){
-            return A;
+    public static IntList dcatenate(IntList A, IntList B){
+        if (A == null){
+            return B;
         }
         IntList p1 = A;
-        if (p1.rest != null){
+        while (p1.rest != null){
             p1 = p1.rest;
         }
-        p1.rest.rest = B;
+        p1.rest = B;
         return A;
     }
 
@@ -97,7 +97,7 @@ public class IntList {
      * * elements of B.  May NOT modify items of A.  Use 'new'.
      * Recursive.
      */
-    public static IntList catenate1(IntList A, IntList B) {
+    public static IntList catenateRecursive(IntList A, IntList B){
 
         if (A == null){
             return B;
@@ -110,9 +110,9 @@ public class IntList {
      * * elements of B.  May NOT modify items of A.  Use 'new'.
      * Iterative.
      */
-    public static IntList catenate(IntList A, IntList B) {
+    public static IntList catenate(IntList A, IntList B){
         if (A == null){
-            return null;
+            return B;
         }
         IntList res = new IntList(A.first, null);
         IntList p = res;
