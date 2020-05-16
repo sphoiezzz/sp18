@@ -29,11 +29,10 @@ public class Planet{
 	/**
 	* The name of the file that corresponds to the image that depicts the planet.
 	*/
-	String imgFileName;
+	public String imgFileName;
 	/**
 	* Gravitational constant.
 	*/
-	public static double G = 6.67 * Math.pow(10,-11);
 
 	/** Create a Planet. */
 	public Planet(double xP, double yP, double xV, double yV, double m, String img){
@@ -65,6 +64,7 @@ public class Planet{
     
     /** Returns a double describing the force exerted on this planet by the given planet. */
     public double calcForceExertedBy(Planet rocinante){
+        double G = 6.67e-11;
     	double force = (G*this.mass*rocinante.mass)/(this.calcDistance(rocinante)*this.calcDistance(rocinante));
     	return force;
     }
