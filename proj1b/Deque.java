@@ -22,7 +22,7 @@ public interface Deque<T> {
      * Must not alter the deque!*/
     public T get(int index);
     /** Returns true if deque is empty, false otherwise.*/
-    default boolean isEmpty(){
+    default boolean isEmpty() {
         return size() == 0;
     }
 }

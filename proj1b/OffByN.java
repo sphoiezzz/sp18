@@ -3,7 +3,7 @@ public class OffByN implements CharacterComparator {
     private int num;
 
     /** A single argument constructor which takes an integer. */
-    public OffByN(int N){
+    public OffByN(int N) {
         num = N;
     }
 

@@ -12,7 +12,7 @@ public class Palindrome {
     }
 
     /** Returns true if the given word is a palindrome, and false otherwise. */
-   /* method1.
+    /* method1.
     public boolean isPalindrome(String word) {
         Deque<Character> d = wordToDeque(word);
         while (d.size() > 1){
@@ -59,7 +59,8 @@ public class Palindrome {
     /*
      private boolean isPalindrome(Deque<Character> wordInDeque, CharacterComparator cc) {
         while (wordInDeque.size() > 1) {
-            return cc.equalChars(wordInDeque.removeFirst(), wordInDeque.removeLast()) && isPalindrome(wordInDeque, cc);
+            return cc.equalChars(wordInDeque.removeFirst(), wordInDeque.removeLast())
+        && isPalindrome(wordInDeque, cc);
         }
         return true;
     }
